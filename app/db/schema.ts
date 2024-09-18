@@ -1,8 +1,14 @@
+import { config } from 'dotenv';
 import { integer, sqliteTable, text, primaryKey } from "drizzle-orm/sqlite-core"
 import { createClient } from "@libsql/client"
 import { drizzle } from "drizzle-orm/libsql"
 import type { AdapterAccountType } from "next-auth/adapters"
- 
+
+config({ path: '.env.local' }); // or .env.local
+// const client = createClient({
+//   url: process.env.TURSO_CONNECTION_URL!,
+//   authToken: process.env.TURSO_AUTH_TOKEN!,
+// });
 const client = createClient({
   url: "file:./db.sqlite",
 })
@@ -16,6 +22,7 @@ export const users = sqliteTable("user", {
   email: text("email").notNull(),
   emailVerified: integer("emailVerified", { mode: "timestamp_ms" }),
   image: text("image"),
+  role:  text("role").default("user"),
 })
  
 export const accounts = sqliteTable(

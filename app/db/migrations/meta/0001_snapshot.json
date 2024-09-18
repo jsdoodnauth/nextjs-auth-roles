@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "a9559e53-f517-411b-90d9-da2b00d6a71f",
-  "prevId": "10e8212f-53f6-4159-8ad6-ca50ec698ea6",
+  "id": "364f7c07-3d8b-4394-ad46-8e4bdb6e78aa",
+  "prevId": "45e87724-70fb-4ac1-8d27-5a3b7e965fbd",
   "tables": {
     "account": {
       "name": "account",
@@ -288,6 +288,14 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'user'"
         }
       },
       "indexes": {},
