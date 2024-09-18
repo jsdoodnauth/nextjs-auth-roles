@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+package-lock.json
 
 # testing
 /coverage
@@ -20,7 +21,6 @@
 .DS_Store
 *.pem
 db.sqlite
-package-lock.json
 
 # debug
 npm-debug.log*
@@ -37,3 +37,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Drizzle
+/app/db/migrations/*.sql
+/app/db/migrations/meta/*.json
+/migrations/meta/*.json
