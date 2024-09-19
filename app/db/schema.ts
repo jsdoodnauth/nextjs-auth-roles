@@ -93,3 +93,5 @@ export const authenticators = sqliteTable(
     }),
   })
 )
+
+export type User = typeof users.$inferSelect;
